@@ -15,11 +15,10 @@ body {
 }
 
 #templateImage {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
-
 #overlayImage {
   position: absolute;
   top: 20%; /* Adjust as needed */
@@ -30,16 +29,23 @@ body {
   display: none;
 }
 
-
 #fileInput {
   margin-top: 20px;
 }
 
-#downloadButton,
-.whatsapp {
+#downloadButton {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.whatsapp {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: green;
   color: white;
   border: none;
   border-radius: 5px;
