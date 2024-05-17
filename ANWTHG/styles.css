@@ -15,7 +15,9 @@ body {
 }
 
 #templateImage {
-  display: block;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 #overlayImage {
@@ -27,7 +29,7 @@ body {
   border-radius: 50px;
   display: none;
 }
-/* @meda */
+
 
 #fileInput {
   margin-top: 20px;

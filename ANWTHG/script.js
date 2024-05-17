@@ -27,22 +27,33 @@ document
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
 
-    // Set canvas dimensions to match the template image
-    canvas.width = templateImage.width;
-    canvas.height = templateImage.height;
+    // Set canvas dimensions to match the maximum width and height of both images
+    const canvasWidth = Math.max(
+      templateImage.width,
+      overlayImage.width + overlayImage.offsetLeft
+    );
+    const canvasHeight = Math.max(
+      templateImage.height,
+      overlayImage.height + overlayImage.offsetTop
+    );
+
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
 
     // Draw the template image onto the canvas
-    context.drawImage(templateImage, 0, 0);
-
-    // Get the CSS defined position of the overlay image
-    const overlayLeft = parseFloat(window.getComputedStyle(overlayImage).left);
-    const overlayTop = parseFloat(window.getComputedStyle(overlayImage).top);
+    context.drawImage(
+      templateImage,
+      0,
+      0,
+      templateImage.width,
+      templateImage.height
+    );
 
     // Draw the overlay image onto the canvas at the specified position
     context.drawImage(
       overlayImage,
-      overlayLeft,
-      overlayTop,
+      overlayImage.offsetLeft,
+      overlayImage.offsetTop,
       overlayImage.width,
       overlayImage.height
     );
