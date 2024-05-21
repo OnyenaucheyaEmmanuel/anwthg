@@ -22,9 +22,9 @@ body {
 #overlayImage {
   position: absolute;
   top: 20%; /* Adjust as needed */
-  left: 34%; /* Adjust as needed */
-  width: 150px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
+  left: 32%; /* Adjust as needed */
+  width: 140px; /* Adjust as needed */
+  height: 90px; /* Adjust as needed */
   border-radius: 50px;
   display: none;
 }
